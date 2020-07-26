@@ -25,11 +25,11 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button id="minusBtn" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input id="item-number" type="text" class="form-control text-center" value="1">
-                           <button id="plusBtn" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input type="text" class="form-control text-center" value="1">
+                           <button class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
-                        <h5>$ <span id="item-price"> 1219 </span></h5>
+                        <h5>$ 1219 </h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -64,9 +64,9 @@
                      </div>
 
                      <div class="col-md-4 status">
-                        <h5>$ <span id="subTotal">0</span></h5>
-                        <h5>$ <span id="tax">0</span></h5>
-                        <h5>$ <span id="total">0</span> </h5>
+                        <h5>$ 0</h5>
+                        <h5>$ 0</h5>
+                        <h5>$ 0 </h5>
                      </div>
                   </div>
                </div>
@@ -79,39 +79,6 @@
    </section>
    <script>
 
-      // Phone / Product Item start
-      // plusBtn event click handler.
-     const plusBtn = document.getElementById("plusBtn");
-     plusBtn.addEventListener("click", function () {
-        const itemNumber = document.getElementById("item-number").value;
-        const convertItem = parseFloat(itemNumber);
-        let addedItem = parseFloat(convertItem+1);
-      //   itemPrice
-        const itemPrice = document.getElementById("item-price").innerText;
-        const convertPrice = parseFloat(itemPrice);
-        let mulPrice = parseFloat(convertPrice + 1219);
-        
-
-        document.getElementById("item-price").innerText = mulPrice;
-        document.getElementById("item-number").value = addedItem;
-
-      });
-      // minusBtn event click handler.
-      const minusBtn = document.getElementById("minusBtn");
-      minusBtn.addEventListener("click", function () {
-         const subItemNumber = document.getElementById("item-number").value;
-         const convertSubItem = parseFloat(subItemNumber);
-         let subItem = parseFloat(convertSubItem-1);
-         // item Price
-         const subitemPrice = document.getElementById("item-price").innerText;
-         const subConvertPrice = parseFloat(subitemPrice);
-         let subMulPrice = parseFloat(subConvertPrice - 1219);
-
-        document.getElementById("item-price").innerText = subMulPrice;
-        document.getElementById('item-number').value = subItem;
-      })
-
-      // Phone / Product Item end
 
 
 
